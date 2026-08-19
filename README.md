@@ -38,3 +38,4 @@ Os pedidos de horário enviados pelo site ficam salvos na tabela `Lead`
 de atendimento por IA (classificação de mensagens + agendamento automático),
 que ainda não foi implementada — hoje o proprietário acompanha os leads
 manualmente (ex.: via `npx prisma studio`) e responde pelo WhatsApp.
+# santabarbearia
