@@ -1,0 +1,63 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+enum LeadStatus {
+  NEW
+  CONTACTED
+  SCHEDULED
+  CLOSED
+}
+
+model Service {
+  id          String   @id @default(cuid())
+  name        String
+  slug        String   @unique
+  description String
+  priceFrom   Decimal  @db.Decimal(10, 2)
+  durationMin Int
+  order       Int      @default(0)
+  active      Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  leads       Lead[]
+
+  @@index([active, order])
+}
+
+model Testimonial {
+  id         String   @id @default(cuid())
+  authorName String
+  rating     Int      @default(5)
+  text       String
+  source     String   @default("google")
+  avatarUrl  String?
+  featured   Boolean  @default(false)
+  createdAt  DateTime @default(now())
+
+  @@index([featured, createdAt])
+}
+
+/// Pedidos de horário recebidos pelo site. Hoje alimentam apenas o
+/// atendimento humano via WhatsApp; no futuro serão o ponto de entrada
+/// para os agentes de IA (classificação da mensagem e agendamento
+/// automático), que vão ler/atualizar `status` conforme evoluem o
+/// atendimento.
+model Lead {
+  id        String     @id @default(cuid())
+  name      String
+  phone     String
+  message   String?
+  serviceId String?
+  service   Service?   @relation(fields: [serviceId], references: [id])
+  source    String     @default("website")
+  status    LeadStatus @default(NEW)
+  createdAt DateTime   @default(now())
+
+  @@index([status, createdAt])
+}

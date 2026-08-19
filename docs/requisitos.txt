@@ -1,0 +1,20 @@
+https://barbeariacorleone.com.br/
+
+Vamos usar o site acima como referência de design do novo site que iremos desenvolver para a Santa Barbearia, em Araraquara.
+
+A stack é a padrão:
+- Next.Js, typescript, tailwind, shadcn/ui, Prisma ORM, Zod, Postgres, etc.
+
+Irei colocar as fotos que estão no perfil do Google Maps. Portanto, pode se basear nessas fotos do perfil do Google Maps.
+Se for possível, faça o download dessas imagens que estão no Google Maps e as colocque nos public/images/ do projeto.
+Aqui vai o link do Google Maps: https://share.google/GNNLqP0RnTXzXQ9ex
+
+Pode pegar os testemunhos e os textos da avaliação do Google, para que sejam replicados no site.
+
+Existem outros testemunhos e outras fotos no seguinte endereço: https://wanderboat.ai/local-businesses/brazil/regi%C3%A3o-imediata-de-araraquara/santa-barbearia-araraquara/Tms03nUSSwOOZouCkGzR7Q
+Procure lá também para poder elaborar melhor o nosso site.
+
+O proprietário atualmente usa um sistema de marcação de horário pelo whatsapp. Embora seja automático, não tem uma IA que facilite o atendimento.
+Inicialmente não iremos colocar essa IA, mas já deixe pronto para uma futura evolução para o atendimento inicial com um agente de IA para classificar as mensagens e outro para fazer o agendamento e outros que forem necessários.
+
+Capricha, Clôd!! Quero impressionar logo de cara!!!
