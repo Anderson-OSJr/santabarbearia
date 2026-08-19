@@ -58,11 +58,15 @@ export function Location() {
               </div>
 
               <div className="flex flex-col gap-3 pt-2 sm:flex-row">
-                <Button render={<a href={MAPS_DIRECTIONS_URL} target="_blank" rel="noopener noreferrer" />}>
+                <Button
+                  nativeButton={false}
+                  render={<a href={MAPS_DIRECTIONS_URL} target="_blank" rel="noopener noreferrer" />}
+                >
                   Ver rota no Google Maps
                 </Button>
                 <Button
                   variant="outline"
+                  nativeButton={false}
                   render={<a href={buildWhatsappLink()} target="_blank" rel="noopener noreferrer" />}
                 >
                   Chamar no WhatsApp

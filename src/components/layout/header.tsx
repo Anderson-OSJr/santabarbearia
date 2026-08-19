@@ -33,6 +33,7 @@ export function Header() {
         <div className="hidden md:block">
           <Button
             size="sm"
+            nativeButton={false}
             render={<a href={buildWhatsappLink()} target="_blank" rel="noopener noreferrer" />}
           >
             Agendar
@@ -69,6 +70,7 @@ export function Header() {
             <div className="mt-auto p-4">
               <Button
                 className="w-full"
+                nativeButton={false}
                 render={<a href={buildWhatsappLink()} target="_blank" rel="noopener noreferrer" />}
               >
                 Agendar no WhatsApp

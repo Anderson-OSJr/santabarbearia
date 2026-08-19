@@ -43,6 +43,7 @@ export function Hero() {
           <Button
             size="lg"
             className="h-12 px-8 text-base"
+            nativeButton={false}
             render={<a href={buildWhatsappLink()} target="_blank" rel="noopener noreferrer" />}
           >
             Agendar no WhatsApp
@@ -51,6 +52,7 @@ export function Hero() {
             size="lg"
             variant="outline"
             className="h-12 px-8 text-base"
+            nativeButton={false}
             render={<a href="#servicos" />}
           >
             Conhecer os serviços
