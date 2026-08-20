@@ -1,24 +1,14 @@
-import {
-  Armchair,
-  Award,
-  Clock3,
-  Scissors,
-  Sparkles,
-  Users,
-} from "lucide-react";
+import Image from "next/image";
 import { Reveal } from "@/components/shared/reveal";
 import { SectionHeading } from "@/components/shared/section-heading";
-import { PlaceholderTile } from "@/components/shared/placeholder-tile";
 
-// Quando as fotos reais chegarem, troque cada PlaceholderTile abaixo por
-// <Image src="/images/gallery/0N.jpg" .../> — ver public/images/gallery/README-swap.txt
 const TILES = [
-  { icon: Armchair, caption: "Sala de Atendimento" },
-  { icon: Scissors, caption: "Estação de Barba" },
-  { icon: Sparkles, caption: "Acabamento na Navalha" },
-  { icon: Users, caption: "Ambiente Santa Barbearia" },
-  { icon: Award, caption: "Produtos Premium" },
-  { icon: Clock3, caption: "Atendimento Pontual" },
+  { src: "/images/gallery/01.jpg", caption: "Acabamento na Navalha" },
+  { src: "/images/gallery/02.jpg", caption: "Design de Fade" },
+  { src: "/images/gallery/03.jpg", caption: "Atendimento Santa Barbearia" },
+  { src: "/images/gallery/04.jpg", caption: "Estilo e Precisão" },
+  { src: "/images/gallery/05.jpg", caption: "Cortes Modernos" },
+  { src: "/images/gallery/06.jpg", caption: "Ambiente Santa Barbearia" },
 ];
 
 export function Gallery() {
@@ -29,14 +19,20 @@ export function Gallery() {
           <SectionHeading
             eyebrow="Conheça"
             title="Nosso Espaço"
-            subtitle="Em breve, fotos reais do nosso ambiente. Por ora, um preview do que está por vir."
+            subtitle="Cortes, acabamentos e o dia a dia da Santa Barbearia."
           />
         </Reveal>
 
         <div className="mt-16 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {TILES.map((tile, i) => (
-            <Reveal key={tile.caption} delay={((i % 3) * 100) as 0 | 100 | 200}>
-              <PlaceholderTile icon={tile.icon} caption={tile.caption} />
+            <Reveal key={tile.src} delay={((i % 3) * 100) as 0 | 100 | 200}>
+              <Image
+                src={tile.src}
+                alt={tile.caption}
+                width={800}
+                height={600}
+                className="aspect-4/3 w-full rounded-lg border border-border object-cover"
+              />
             </Reveal>
           ))}
         </div>

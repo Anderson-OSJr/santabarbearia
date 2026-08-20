@@ -7,17 +7,23 @@ export function Footer() {
     <footer className="border-t border-border/60 bg-background">
       <div className="mx-auto grid max-w-6xl gap-10 px-4 py-16 sm:grid-cols-3 sm:px-6 lg:px-8">
         <div>
-          <span className="font-display text-lg font-semibold">{BUSINESS.name}</span>
+          <span className="font-display text-lg font-semibold">
+            {BUSINESS.name}
+          </span>
           <p className="mt-3 text-sm text-muted-foreground">
             {BUSINESS.addressLine}
             <br />
             {BUSINESS.addressCity}, {BUSINESS.postalCode}
           </p>
-          <p className="mt-3 text-sm text-muted-foreground">{BUSINESS.phoneDisplay}</p>
+          <p className="mt-3 text-sm text-muted-foreground">
+            {BUSINESS.phoneDisplay}
+          </p>
         </div>
 
         <div>
-          <span className="text-sm font-semibold text-foreground">Navegação</span>
+          <span className="text-sm font-semibold text-foreground">
+            Navegação
+          </span>
           <ul className="mt-3 flex flex-col gap-2">
             {NAV_LINKS.map((link) => (
               <li key={link.href}>

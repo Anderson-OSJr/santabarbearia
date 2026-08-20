@@ -1,8 +1,10 @@
 import { prisma } from "@/lib/prisma";
 
-// Serviços e depoimentos vêm do Postgres (via Prisma Studio ou seed) — a
-// página é revalidada a cada hora para refletir alterações sem redeploy.
-export const revalidate = 3600;
+// Serviços e depoimentos vêm do Postgres (via Prisma Studio ou seed).
+// Renderização dinâmica: o build da imagem Docker não tem acesso ao banco
+// de produção, então a página não pode ser pré-renderizada (SSG/ISR) —
+// cada request busca os dados atuais direto do Postgres.
+export const dynamic = "force-dynamic";
 import { Hero } from "@/components/sections/hero";
 import { About } from "@/components/sections/about";
 import { Services } from "@/components/sections/services";

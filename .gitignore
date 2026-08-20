@@ -49,3 +49,6 @@ next-env.d.ts
 /.agents/skills
 /.windsurf/skills
 skills-lock.json
+
+# notas de infraestrutura com IP/host/links de conta — não deve ir pro repo
+/docs/deploy.txt

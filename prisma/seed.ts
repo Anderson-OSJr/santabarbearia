@@ -62,37 +62,21 @@ const services = [
   },
 ];
 
-// Depoimentos de EXEMPLO — substituir pelos textos reais do Google
-// Maps/Business Profile assim que a coleta de avaliações reais for feita.
+// Depoimentos reais, coletados da ficha do Google Maps "Santa Barbearia
+// Araraquara" (5,0 · 207 avaliações) em 2026-08-20. Só 2 avaliações tinham
+// nome de autor legível no momento da coleta — dá pra completar depois
+// direto pelo Google Business Profile do proprietário.
 const testimonials = [
   {
-    authorName: "Rafael M.",
+    authorName: "Sandra Díaz",
     rating: 5,
-    text: "Ambiente impecável e atendimento de outro nível. Saí de lá parecendo outra pessoa. Virei cliente fixo.",
+    text: 'Tratamento sempre impecável. Cabelo cacheado do meu filho é "treta" de cortar e fica sempre perfeito. (Corte com tesoura) Cliente há anos e recomendo muito.',
     featured: true,
   },
   {
-    authorName: "Lucas A.",
+    authorName: "Anderson Sanchez",
     rating: 5,
-    text: "Barba feita na navalha com toalha quente é diferencial. Recomendo demais, equipe muito atenciosa.",
-    featured: true,
-  },
-  {
-    authorName: "Gabriel S.",
-    rating: 5,
-    text: "Melhor barbearia de Araraquara. Pontualidade, capricho no corte e preço justo.",
-    featured: true,
-  },
-  {
-    authorName: "Thiago R.",
-    rating: 5,
-    text: "Já indiquei para vários amigos. Ambiente clássico, profissionais excelentes.",
-    featured: false,
-  },
-  {
-    authorName: "Bruno C.",
-    rating: 5,
-    text: "Atendimento rápido pelo WhatsApp e resultado sempre acima do esperado.",
+    text: "Ótimo profissional, recomendo a todos! Top",
     featured: false,
   },
 ];
