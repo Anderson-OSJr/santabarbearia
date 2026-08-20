@@ -9,6 +9,11 @@ const TILES = [
   { src: "/images/gallery/04.jpg", caption: "Estilo e Precisão" },
   { src: "/images/gallery/05.jpg", caption: "Cortes Modernos" },
   { src: "/images/gallery/06.jpg", caption: "Ambiente Santa Barbearia" },
+  { src: "/images/gallery/07.jpg", caption: "Atendimento em Andamento" },
+  { src: "/images/gallery/08.jpg", caption: "Recepção e Espera" },
+  { src: "/images/gallery/09.jpg", caption: "Estação de Trabalho" },
+  { src: "/images/gallery/10.jpg", caption: "Cuidado e Precisão" },
+  { src: "/images/gallery/11.jpg", caption: "Lavatório e Produtos" },
 ];
 
 export function Gallery() {
